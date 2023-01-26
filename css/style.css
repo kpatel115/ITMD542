@@ -1,5 +1,7 @@
 /* CSS Boilerplate*/
 *{ 
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   border: none;
 }
@@ -33,42 +35,50 @@ i{
   color: white;
 }
 nav ul{
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  margin: 0px 40px;
   align-items: center;
 }
-nav ul li{
-  border: 1px solid antiquewhite;
-  border-radius: 8px;
-  padding: 0.8rem;
-
+li {
+  list-style: none;
+  text-decoration:none;
+  cursor:pointer;
+  color: white;
+  border: solid 1px antiquewhite;
+  padding: 10px;
+  margin: 20px 20px;
+  border-radius: 5px;
+}
+li:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
 }
 body{
   font-family: 'Cormorant Garamond', serif;
   background-color: black;
   color: whitesmoke;
 }
-img {
-  display: block;
-  max-width: 100%;
-  background-repeat: repeat-x;
-  height: 100vh;
-  opacity: 0.8;
-}
-.introduction{
-}
-.grid-container1{
+.container1{
   display: grid;
-  grid-template-columns: [line1] 40px [line2] auto [line3] 40px [line4];
-  grid-template-rows: [row1] 25% [row2] 50% [row3] 25% [row4];
+  height: 100%;
 }
-.grid-article{
-  grid-column-start:line2 ;
-  grid-column-end:line3 ;
-  grid-row-start:row1 ;
-  grid-row-end:row3;
+.center-fit{
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+  opacity: 0.7;
+}
+.article-container{
+  font-size: 1.5rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* Smooth Scrolling*/
 @media (prefers-reduced-motion: no-preference) {
