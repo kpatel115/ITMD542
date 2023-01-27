@@ -83,7 +83,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-.textbox{
+.textbox1{
   position: absolute;
   top: 80vh;
   right: 25vw;
@@ -91,10 +91,10 @@ body{
   color: antiquewhite;
   opacity: 0.9
 }
-.textbox span{
+.textbox1 span{
   font-weight: bold;
 }
-.sliding-text{
+.textbox2{
   color: antiquewhite;
   position: absolute;
   top: 40vh;
@@ -104,10 +104,10 @@ body{
   
   opacity: 0.9
 }
-.sliding-text h2{
+.textbox2 h2{
   margin: 10px 0px;
 }
-.sliding-text span{
+.textbox2 span{
   font-weight: bold;
   font-style: italic;
   color: wheat;
