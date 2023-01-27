@@ -85,14 +85,32 @@ body{
 }
 .textbox{
   position: absolute;
-  top: 60vh;
-  left: 45vw;
+  top: 80vh;
+  right: 25vw;
   background-color: black;
   color: antiquewhite;
   opacity: 0.9
 }
 .textbox span{
   font-weight: bold;
+}
+.sliding-text{
+  color: antiquewhite;
+  position: absolute;
+  top: 40vh;
+  left: 20vw;
+  float: left;
+  background-color: black;
+  
+  opacity: 0.9
+}
+.sliding-text h2{
+  margin: 10px 0px;
+}
+.sliding-text span{
+  font-weight: bold;
+  font-style: italic;
+  color: wheat;
 }
 /* Smooth Scrolling*/
 @media (prefers-reduced-motion: no-preference) {
