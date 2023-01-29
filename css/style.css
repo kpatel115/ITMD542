@@ -45,17 +45,19 @@ nav ul{
 li {
   list-style: none;
   text-decoration:none;
+  text-align: center;
   cursor:pointer;
-  color: white;
+  background-color: black;
+  color: antiquewhite;
   border: solid 1px antiquewhite;
-  padding: 10px;
+  padding: 0.5rem;
   margin: 20px 20px;
   border-radius: 5px;
 }
-li:hover{
-  background-color: white;
+li:hover, li:focus{
+  background-color: antiquewhite;
   color: black;
-  transition: 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 body{
   font-family: 'Cormorant Garamond', serif;
@@ -89,8 +91,13 @@ body{
   right: 25vw;
   background-color: black;
   color: antiquewhite;
-  opacity: 0.9
+  opacity: 0.9;
+
 }
+.textbox1:hover{
+  visibility: visible;
+}
+
 .textbox1 span{
   font-weight: bold;
 }
@@ -101,8 +108,16 @@ body{
   left: 20vw;
   float: left;
   background-color: black;
-  
-  opacity: 0.9
+  opacity: 0.9;
+  display: none;
+}
+.hide{
+  opacity: 0;
+  left: -100%;
+}
+.show {
+  opacity: 1;
+  left: 0;
 }
 .textbox2 h2{
   margin: 10px 0px;
