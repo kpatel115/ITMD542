@@ -92,15 +92,25 @@ body{
   background-color: black;
   color: antiquewhite;
   opacity: 0.9;
-
+  animation: ani2 0.5s ease-out forwards;
 }
-.textbox1:hover{
-  visibility: visible;
-}
-
+.textbox1 h2,
+.textbox1 p,
 .textbox1 span{
+  opacity: 0;
+  margin: 0;
+}
+.textbox1 h2{
+  animation:  ani2 0.75s ease-out 3s forwards;
+}
+.textbox1 p{
+  animation:  ani2 0.75s ease-out 4s forwards;
+}
+.textbox1 span{
+  animation:  ani2 0.75s ease-out 4s forwards;
   font-weight: bold;
 }
+
 .textbox2{
   color: antiquewhite;
   position: absolute;
@@ -108,17 +118,36 @@ body{
   left: 20vw;
   float: left;
   background-color: black;
-  opacity: 0.9;
-  display: none;
-}
-.hide{
   opacity: 0;
-  left: -100%;
+  animation: ani2 0.5s ease-out forwards;
 }
-.show {
-  opacity: 1;
-  left: 0;
+.textbox2 h2,
+.textbox2 p,
+.textbox2 span{
+  opacity: 0;
+  margin: 0;
 }
+.textbox2 h2{
+  animation:  ani2 0.75s ease-out 1s forwards;
+}
+.textbox2 p{
+  animation:  ani2 0.75s ease-out 2s forwards;
+}
+.textbox2 span{
+  animation:  ani2 0.75s ease-out 5s forwards;
+}
+@keyframes ani2{
+    100%{
+      opacity: 1;
+    }
+}
+@keyframes ani1{
+  100%{
+    transform: scale(1.55);
+  }
+}
+
+
 .textbox2 h2{
   margin: 10px 0px;
 }
