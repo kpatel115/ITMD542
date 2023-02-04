@@ -28,7 +28,19 @@
       
       <ul class="nav-menu2">
         <li><i class="fa-solid fa-cube"></i></li>
-        <li><i class="fa-solid fa-bars"></i></li>
+        <div class="dropdown" data-dropdown>
+          <button class="link" data-dropdown-button><i class="fa-solid fa-bars"></i></button>
+          <div class="dropdown-menu menu-grid">
+            <div>
+              <div class="dropdown-heading">Info</div>
+              <div class="dropdown-links">
+                <a href="#" class="link">Home</a>
+                <a href="#" class="link">About</a>
+                <a href="#" class="link">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </ul>
     </div>
   </nav>
@@ -69,7 +81,7 @@
     </div>
 
   </section>
-  <script src="js/index.js"></script>
+  <script src="js/index.js" defer></script>
 </body>
 
 </html>
