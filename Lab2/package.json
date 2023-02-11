@@ -4,7 +4,10 @@
   "description": "itmd542-lab2 assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "dev": "DEBUG=lab2:* nodemon ./bin/www"
+
   },
   "author": "Karan Patel",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "express": "^4.18.2",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
     "pug": "^3.0.2"
   }
 }
