@@ -3,3 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  .index-content
+    form(action='/search' method='GET')
+      input.input-search(autofocus='' placeholder='Enter Contact Name' type='search' name='search')
+      button.btn-add(type='button', onclick='add')
+        i.fa-solid.fa-plus(aria-hidden='true') 

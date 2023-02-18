@@ -1,6 +1,15 @@
 extends layout
 
+let contact1 = {
+  contactID: "001",
+  firstName: "karan",
+  lastName: "patel",
+  email: "karanpatel@gmail.com",
+  notes: "",
+  time: ""
+};
+
 block content
   h1= title
   p Express todo
-  //Welcome to #{title}
+  #contact-example= contact1
