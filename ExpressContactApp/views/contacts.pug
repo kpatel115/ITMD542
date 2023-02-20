@@ -4,8 +4,8 @@ block content
   h1= title
   p Welcome to #{title}
   hr
-  if contact.length > 0
+  if contacts.length > 0
     #contacts-wrapper 
       ul.contacts-list 
-        each val in contact
-          li(contacts-contact)= val.contactID 
+        each val in contacts
+          li(data-contactid=val.id)= val.name
