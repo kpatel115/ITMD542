@@ -12,9 +12,15 @@ router.get('/', function(req, res, next) {
   res.render('contacts', { title: 'Express Contacts', contacts: data});
 });
 
-/* Get Create Contact Form */
+/* GET Create Contact Form */
 router.get('/add', function(req, res, next) {
   res.render('contacts_add', { title: 'Add An Express Contact' });
+});
+
+/* POST Create Contact  */
+router.post('/add', function(req, res, next) {
+  console.log(req.body);
+  res.send('contact created');
 });
 
 module.exports = router;
