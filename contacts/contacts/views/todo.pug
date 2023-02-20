@@ -1,15 +1,35 @@
 extends layout
 
-let contact1 = {
-  contactID: "001",
-  firstName: "karan",
-  lastName: "patel",
-  email: "karanpatel@gmail.com",
-  notes: "",
-  time: ""
-};
 
 block content
   h1= title
   p Express todo
-  #contact-example= contact1
+
+  
+  div.index-form
+    h2 Add a Contact
+    form(action='/search' method='GET')
+      label First Name
+      input(type='text' name='firstName')
+      br
+      label Last Name
+      input(type='text' name='lastName')
+      br
+      label Email
+      input(type='text' name='email')
+      br
+      label Notes
+      input(type='textarea' name='notes')
+      br
+      label Date/Time
+      br
+      label Click to create contact
+      button.btn-add(type='submit', onclick='add')
+        i.fa-solid.fa-plus(aria-hidden='true') 
+  div.index-content
+    h2 Search for current contacts
+    br
+    input.input-search(autofocus='' placeholder='Enter Contact Name' type='search' name='search')
+
+
+
