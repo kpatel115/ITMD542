@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  hr
+  if contact.length > 0
+    #contacts-wrapper 
+      ul.contacts-list 
+        each val in contact
+          li(contacts-contact)= val.contactID 
