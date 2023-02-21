@@ -3,6 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  a(href='/') 
+    i.fa-solid.fa-home(aria-hidden='true') 
   a(href='/contacts/add') Add a Contact
   hr
   if contacts.length > 0
