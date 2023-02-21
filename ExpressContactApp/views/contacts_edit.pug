@@ -7,8 +7,19 @@ block content
   if msg 
     p(class='error-msg')= msg
   form(method='POST' action=`/contacts/${contact.id}/edit`)
-    input(type="text", name="firstName", value=contact.name)
-    | 
+    label First Name
+    input(type="text", name="firstName", value=contact.name required)
+    br
+    label Last Name
+    input(type='text' name='lastName' value=contact.lname required)
+    br
+    label Email
+    input(type='text' name='email' value=contact.email)
+    br
+    label Notes
+    input(type='textarea' name='notes' value=contact.notes)
+    br
+    label Date/Time
     button.btn-edit(type='submit') Confirm Edit
     | 
     a(href=`/contacts/${contact.id}`) Cancel

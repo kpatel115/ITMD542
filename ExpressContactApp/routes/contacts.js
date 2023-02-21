@@ -5,7 +5,7 @@ const contactsRepo = require('../src/contactsFileRepository');
 // const contactsRepo = require('../src/contactsFileRepository.js');
 let data = [
   {name: "karan", id: "ddad031e-e030-419a-9518-2f16534edeaf"},
-  {name: "patel", id: "e4a9c8f6-4bb8-44f5-8915-8df78500f6e3"}
+  {id: "e4a9c8f6-4bb8-44f5-8915-8df78500f6e3", name: "vawn", lname: "patel", email: "vawnpatel@gmail.com", notes: "this is example contact", date: 1676952665922 }
 ]
 
 

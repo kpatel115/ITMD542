@@ -2,7 +2,11 @@ extends layout
 
 block content
   h1= title
-  p= contact.name 
+  div 
+    p= contact.name
+    p=contact.lname 
+    p=contact.email
+    p=contact.notes
     .contact-actions 
       a(href="/contacts") View All Contacts
       br
