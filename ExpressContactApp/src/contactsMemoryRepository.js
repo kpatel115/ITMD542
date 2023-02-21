@@ -17,10 +17,11 @@ const repo = {
       id: crypto.randomUUID(),
       name: contact.name,
     };
-    db.set(newContact.id, newContact)
+    db.set(newContact.id, newContact);
   },
-  deleteByID: (uuid) => db.delete(uuid),
+  deleteById: (uuid) => db.delete(uuid),
   update: (contact) => db.set(contact.id, contact),
+
 };
 
 module.exports = repo;

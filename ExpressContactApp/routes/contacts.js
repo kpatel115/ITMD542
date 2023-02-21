@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 //const { randomUUID } = require("node:crypto");
-const contactsRepo = require('../src/contactsMemoryRepository');
+const contactsRepo = require('../src/contactsFileRepository');
+// const contactsRepo = require('../src/contactsFileRepository.js');
 let data = [
   {name: "karan", id: "ddad031e-e030-419a-9518-2f16534edeaf"},
   {name: "patel", id: "e4a9c8f6-4bb8-44f5-8915-8df78500f6e3"}
@@ -53,7 +54,7 @@ router.get('/:uuid/delete', function(req, res, next) {
 /* POST Delete Contact */
 router.post('/:uuid/delete', function(req, res, next) {
   //delete from repo
-  contactsRepo.deleteByID(req.params.uuid);
+  contactsRepo.deleteById(req.params.uuid);
   res.redirect('/contacts')
 });
 
@@ -67,7 +68,7 @@ router.get('/:uuid/edit', function(req, res, next) {
 router.post('/:uuid/edit', function(req, res, next) {
   if (req.body.firstName.trim() === "") {
     const contact = contactsRepo.findById(req.params.uuid);
-    res.render('contacts_edit', { title: "Edit a Contact", msg: "Please fill out the form"});
+    res.render('contacts_edit', { title: "Edit a Contact", msg: 'Please fill out the form'});
   } else {
     // update Database
     const updatedContact = {id: req.params.uuid, name: req.body.firstName.trim() };
