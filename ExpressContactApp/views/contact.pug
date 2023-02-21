@@ -3,13 +3,20 @@ extends layout
 block content
   h1= title
   div 
-    p= contact.name
-    p=contact.lname 
+    h2= contact.name
+    p= contact.lname 
     p=contact.email
-    p=contact.notes
+    p=contact.notes 
+    p=contact.time 
+    p=contact.id
     .contact-actions 
       a(href="/contacts") View All Contacts
       br
+      br
+      br
       a(href=`/contacts/${contact.id}/delete`) Delete Contact
       br 
+      br
+      br
+      
       a(href=`/contacts/${contact.id}/edit`) Edit Contact

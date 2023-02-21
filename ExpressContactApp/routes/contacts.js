@@ -3,6 +3,7 @@ var router = express.Router();
 //const { randomUUID } = require("node:crypto");
 const contactsRepo = require('../src/contactsFileRepository');
 // const contactsRepo = require('../src/contactsFileRepository.js');
+
 let data = [
   {name: "karan", id: "ddad031e-e030-419a-9518-2f16534edeaf"},
   {id: "e4a9c8f6-4bb8-44f5-8915-8df78500f6e3", name: "vawn", lname: "patel", email: "vawnpatel@gmail.com", notes: "this is example contact", date: 1676952665922 }
@@ -27,7 +28,7 @@ router.post('/add', function(req, res, next) {
     res.render('contacts_add', { title: "Add a Contact", msg: "Please fill out the form"});
   } else {
     // add contact to database
-    contactsRepo.create({name: req.body.firstName.trim()})
+    contactsRepo.create({name: req.body.firstName.trim(), lname: req.body.lastName.trim(), email:req.body.email.trim(), notes: req.body.notes.trim()})
     res.redirect('/contacts');
     res.send('contact created');
   }
@@ -71,7 +72,7 @@ router.post('/:uuid/edit', function(req, res, next) {
     res.render('contacts_edit', { title: "Edit a Contact", msg: 'Please fill out the form'});
   } else {
     // update Database
-    const updatedContact = {id: req.params.uuid, name: req.body.firstName.trim() };
+    const updatedContact = {id: req.params.uuid, name: req.body.firstName.trim(), lname: req.body.lastName.trim(), email: req.body.email.trim(), notes: req.body.notes.trim() };
     contactsRepo.update(updatedContact);
     res.redirect(`/contacts/${req.params.uuid}`);
   }

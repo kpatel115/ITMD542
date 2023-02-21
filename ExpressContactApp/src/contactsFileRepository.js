@@ -29,6 +29,10 @@ const repo = {
     const newContact = {
       id: crypto.randomUUID(),
       name: contact.name,
+      lname: contact.lname,
+      email: contact.email,
+      notes: contact.notes,
+      time: Date.now()
     };
     db.set(newContact.id, newContact);
     saveData();

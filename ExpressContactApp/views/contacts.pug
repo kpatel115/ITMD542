@@ -9,5 +9,5 @@ block content
     #contacts-wrapper 
       ul.contacts-list 
         each val in contacts
-          li(data-contactid=val.id)= val.name
+          li(data-contactid=val.id)= val.id
             a(href=`/contacts/${val.id}`)= val.name

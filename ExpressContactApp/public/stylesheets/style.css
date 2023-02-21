@@ -1,12 +1,30 @@
+*{
+  color: whitesmoke;
+  background-color:  #A44A3F;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: goldenrod;
+  padding:10px;
+  border: 1px solid antiquewhite;
+  border-radius: 8px;
+
 }
 
 .error-msg{
   color: red;
+}
+.contact-actions{
+  padding: 20px;
+  margin: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.index-form{
+  margin: 5px 5px;
 }
