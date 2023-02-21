@@ -18,8 +18,15 @@ a {
 .error-msg{
   color: red;
 }
+#contacts-wrapper{
+  margin: 0px 1rem;
+  padding:1rem;
+  height: auto;
+  border: 1px solid antiquewhite;
+  border-radius: 5px;
+}
 .contact-actions{
-  padding: 20px;
+  padding: 1rem;
   margin: 5px 5px;
   display: flex;
   justify-content: space-between;
