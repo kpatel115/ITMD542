@@ -6,11 +6,11 @@ block content
   hr
   if msg 
     p(class="error-msg") = msg
-    
+
   div.index-form
     h2 Add a Contact
 
-    form(action='/contacts/add' method='POST')
+    form(method='POST', action='/contacts/add')
     
       label First Name
       input(type='text' name='firstName' required)

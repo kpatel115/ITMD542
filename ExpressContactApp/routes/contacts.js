@@ -44,4 +44,37 @@ router.get('/:uuid', function(req, res, next) {
   
 });
 
+/* GET Delete Contact */
+router.get('/:uuid/delete', function(req, res, next) {
+  const contact = contactsRepo.findById(req.params.uuid);
+  res.render('contacts_delete', { title: 'Delete An Express Contact', contact: contact });
+});
+
+/* POST Delete Contact */
+router.post('/:uuid/delete', function(req, res, next) {
+  //delete from repo
+  contactsRepo.deleteByID(req.params.uuid);
+  res.redirect('/contacts')
+});
+
+/* GET Edit Contact */
+router.get('/:uuid/edit', function(req, res, next) {
+  const contact = contactsRepo.findById(req.params.uuid);
+  res.render('contacts_edit', { title: 'Edit An Express Contact', contact: contact });
+});
+
+/* POST Edit Contact  */
+router.post('/:uuid/edit', function(req, res, next) {
+  if (req.body.firstName.trim() === "") {
+    const contact = contactsRepo.findById(req.params.uuid);
+    res.render('contacts_edit', { title: "Edit a Contact", msg: "Please fill out the form"});
+  } else {
+    // update Database
+    const updatedContact = {id: req.params.uuid, name: req.body.firstName.trim() };
+    contactsRepo.update(updatedContact);
+    res.redirect(`/contacts/${req.params.uuid}`);
+  }
+  
+});
+
 module.exports = router;
