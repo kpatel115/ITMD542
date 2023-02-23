@@ -23,7 +23,7 @@ router.get('/add', function(req, res, next) {
 
 /* POST Create Contact  */
 router.post('/add', function(req, res, next) {
-  console.log(req.body);
+  // console.log(req.body);
   if(req.body.firstName.trim() === "") {
     res.render('contacts_add', { title: "Add a Contact", msg: "Please fill out the form"});
   } else {
