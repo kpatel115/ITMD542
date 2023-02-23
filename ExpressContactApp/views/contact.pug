@@ -3,12 +3,25 @@ extends layout
 block content
   h1= title
   div 
-    h2= contact.name
-    p= contact.lname 
-    p=contact.email
-    p=contact.notes 
-    p=contact.time 
-    p=contact.id
+
+    p 
+    | First Name: 
+    = contact.name
+    p 
+    | Last Name: 
+    = contact.lname
+    p 
+    | Email Address: 
+    = contact.email
+    p 
+    | Notes: 
+    = contact.notes
+    p 
+    | Timestamp from Jan 1 1970: 
+    = contact.time
+    p 
+    | Contact UUID: 
+    = contact.id 
     .contact-actions 
       a(href="/contacts") View All Contacts
       br
