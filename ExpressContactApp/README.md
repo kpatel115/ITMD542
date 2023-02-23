@@ -17,9 +17,9 @@ Terminals used: VSCode powershell, Git Bash
 Will need to install dependencies again,
 specifically you must enter these commands from vscode terminal or from git bash logged onto the expressContactApp folder from the repository
 
-- npm i node express
-- npm express-generator view=pug
+- npx express-generator --view=pug
 - npx npm check-updates -i
+- make sure you have node in your system as well
 
 Then after everything is installed, run
 - npm run dev
